@@ -1,0 +1,22 @@
+@page
+@model SingleNewsPage
+@{
+	ViewData["Title"] = HttpContext.Request.Query["news_title"].ToString();
+}
+
+<div class="single-news-container">
+	@{
+		if (Model.news != null) {
+    		<h1 class="text-center my-5">@Model.news.title</h1>
+			<div class="text-center">
+				<img class="news-img" src=@Model.news.imageUrl />
+			</div>
+			foreach (var para in Model.news.content) {
+				<div class="para">@para</div>
+			}
+		}
+	}
+	<div>
+		<a class="back-btn" href='javascript:history.go(-1)'> &#8592; Quay lại</a>
+	</div>
+</div>

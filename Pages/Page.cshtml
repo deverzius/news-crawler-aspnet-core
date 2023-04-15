@@ -1,0 +1,25 @@
+@page
+@model NewsCategoryModel
+@{
+	ViewData["Title"] =  HttpContext.Request.Query["type"].ToString().ToUpper();
+}
+
+<div class="items-container d-flex">
+    @foreach (var item in Model.newsList)
+	{
+		<a class="d-block text-dark text-decoration-none" asp-page="/SinglePage" asp-route-news_title="@item.title">
+			<div class="news-item d-flex my-2">
+				<img class="news-img" src=@item.imageUrl />
+				<div class="text-container">
+					<h5 class="news-title">@item.title</h5>
+					<p class="text-left news-short">@item.detail</p>
+					@* <a asp-page="/SinglePage" asp-route-news_title="@item.title">
+						Đọc thêm
+					</a> *@
+				</div>
+			</div>
+
+		</a>
+		@* Anchor Tag Helper *@
+	}
+</div>

@@ -1,0 +1,68 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.news-item {
+  background-color: #dcdcdc;
+  padding: 8px;
+}
+
+.news-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.news-item .text-container {
+  margin-left: 10px;
+  text-align: left;
+}
+
+.items-container {
+  flex-direction: column;
+}
+
+
+.single-news-container {
+  padding: 0 12%;
+}
+
+.single-news-container img {
+  width: 60%;
+  margin: 30px auto;
+}
+
+.single-news-container .para {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 8px 0;
+  text-align: justify;
+}
+
+.single-news-container .back-btn {
+  text-align: end;
+  display: block;
+  text-decoration: none;
+}
+
+.single-news-container .back-btn:hover {
+  cursor: pointer;
+}
